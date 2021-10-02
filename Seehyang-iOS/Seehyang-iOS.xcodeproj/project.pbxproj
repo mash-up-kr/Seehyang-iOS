@@ -50,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				E32DE0A427083A3B00A359FC /* Info.plist */,
+				D4C40A6A27084FE20099CF28 /* Sources */,
 				D4C40A6427084AB40099CF28 /* Resources */,
 				D4C40A6327084AAC0099CF28 /* Extensions */,
 			);
@@ -69,6 +70,13 @@
 				E32DE09F27083A3B00A359FC /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D4C40A6A27084FE20099CF28 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 		E32DE08A27083A3900A359FC = {
