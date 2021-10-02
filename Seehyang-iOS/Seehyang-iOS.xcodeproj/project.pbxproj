@@ -27,6 +27,8 @@
 		E347162C2708A67A0066F6A9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347162B2708A67A0066F6A9 /* UIStoryboard+Extension.swift */; };
 		E34716302708A6B30066F6A9 /* PerfumeStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347162F2708A6B30066F6A9 /* PerfumeStoryViewController.swift */; };
 		E34716332708A6BB0066F6A9 /* PerfumeStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */; };
+		E34716382708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34716372708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift */; };
+		E347163B2708AB320066F6A9 /* PerfumeStoryOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347163A2708AB320066F6A9 /* PerfumeStoryOrder.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		E347162B2708A67A0066F6A9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		E347162F2708A6B30066F6A9 /* PerfumeStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStoryViewController.swift; sourceTree = "<group>"; };
 		E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfumeStory.storyboard; sourceTree = "<group>"; };
+		E34716372708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStoryOrderViewContoller.swift; sourceTree = "<group>"; };
+		E347163A2708AB320066F6A9 /* PerfumeStoryOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfumeStoryOrder.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,10 +156,20 @@
 		E347162E2708A6A50066F6A9 /* PefrumeStory */ = {
 			isa = PBXGroup;
 			children = (
+				E34716352708AB0D0066F6A9 /* PerfumeStoryOrder */,
 				E347162F2708A6B30066F6A9 /* PerfumeStoryViewController.swift */,
 				E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */,
 			);
 			path = PefrumeStory;
+			sourceTree = "<group>";
+		};
+		E34716352708AB0D0066F6A9 /* PerfumeStoryOrder */ = {
+			isa = PBXGroup;
+			children = (
+				E34716372708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift */,
+				E347163A2708AB320066F6A9 /* PerfumeStoryOrder.storyboard */,
+			);
+			path = PerfumeStoryOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E32DE0B027083B9100A359FC /* .swiftlint.yml in Resources */,
+				E347163B2708AB320066F6A9 /* PerfumeStoryOrder.storyboard in Resources */,
 				E32DE0A327083A3B00A359FC /* LaunchScreen.storyboard in Resources */,
 				2358106E27089AA400D38734 /* Assets.xcassets in Resources */,
 				235810772708A0FF00D38734 /* PerfumeDetail.storyboard in Resources */,
@@ -273,6 +288,7 @@
 				E347162C2708A67A0066F6A9 /* UIStoryboard+Extension.swift in Sources */,
 				E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */,
 				235810792708A18A00D38734 /* UIView+Extension.swift in Sources */,
+				E34716382708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift in Sources */,
 				E34716302708A6B30066F6A9 /* PerfumeStoryViewController.swift in Sources */,
 				E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */,
 			);

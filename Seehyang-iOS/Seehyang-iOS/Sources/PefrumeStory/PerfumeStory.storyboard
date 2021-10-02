@@ -46,6 +46,9 @@
                                 <state key="normal">
                                     <color key="titleColor" red="0.37254901960784315" green="0.32941176470588235" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="orderButtonIsTapped:" destination="xeJ-Vq-uNj" eventType="touchUpInside" id="JX1-Bq-eiv"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfs-G5-caA">
                                 <rect key="frame" x="192" y="84" width="22.5" height="21"/>

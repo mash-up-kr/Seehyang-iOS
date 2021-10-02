@@ -24,6 +24,18 @@ class PerfumeStoryViewController: UIViewController {
         setup()
     }
     
+    @IBAction private func orderButtonIsTapped(_ sender: UIButton) {
+        
+        guard let viewController: UIViewController = UIStoryboard(name: "PerfumeStoryOrder", bundle: nil).instantiateViewController(withIdentifier: PerfumeStoryOrderViewController.identifier) as? PerfumeStoryOrderViewController else {
+            return
+        }
+        
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+        
+        present(viewController, animated: true, completion: nil)
+    }
+    
     // MARK: - Method
     private func setup() {
         setStory()
