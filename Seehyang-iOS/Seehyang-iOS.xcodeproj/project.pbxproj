@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2358106E27089AA400D38734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2358106D27089AA400D38734 /* Assets.xcassets */; };
 		235810772708A0FF00D38734 /* PerfumeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235810762708A0FF00D38734 /* PerfumeDetail.storyboard */; };
+		235810792708A18A00D38734 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235810782708A18A00D38734 /* UIView+Extension.swift */; };
 		D4C40A6D270851EC0099CF28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */; };
 		D4C40A6F270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */; };
 		D4C40A71270851EC0099CF28 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A70270851EC0099CF28 /* FirebaseCrashlytics */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		2358106D27089AA400D38734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235810762708A0FF00D38734 /* PerfumeDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PerfumeDetail.storyboard; sourceTree = "<group>"; };
+		235810782708A18A00D38734 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E32DE09327083A3A00A359FC /* Seehyang-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seehyang-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32DE09627083A3A00A359FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E32DE09827083A3A00A359FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		2358107027089E3D00D38734 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				235810782708A18A00D38734 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				E32DE09B27083A3A00A359FC /* ViewController.swift in Sources */,
 				E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */,
+				235810792708A18A00D38734 /* UIView+Extension.swift in Sources */,
 				E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
