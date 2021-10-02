@@ -17,6 +17,7 @@
 		D4523ADB270836DD00B19A8C /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D4523ADA270836DD00B19A8C /* Moya */; };
 		D4523ADE270836EB00B19A8C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D4523ADD270836EB00B19A8C /* Kingfisher */; };
 		D4523AE1270836FA00B19A8C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D4523AE0270836FA00B19A8C /* Then */; };
+		D4523AE3270837B200B19A8C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D4523AE2270837B200B19A8C /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D4523ACC2708367B00B19A8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4523ACF2708367B00B19A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4523AD12708367B00B19A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4523AE2270837B200B19A8C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		D4523AC22708367A00B19A8C /* Seehyang */ = {
 			isa = PBXGroup;
 			children = (
+				D4523AE2270837B200B19A8C /* .swiftlint.yml */,
 				D4523AC32708367A00B19A8C /* AppDelegate.swift */,
 				D4523AC52708367A00B19A8C /* SceneDelegate.swift */,
 				D4523AC72708367A00B19A8C /* ViewController.swift */,
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4523AE3270837B200B19A8C /* .swiftlint.yml in Resources */,
 				D4523AD02708367B00B19A8C /* LaunchScreen.storyboard in Resources */,
 				D4523ACD2708367B00B19A8C /* Assets.xcassets in Resources */,
 				D4523ACB2708367A00B19A8C /* Main.storyboard in Resources */,
