@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		E32DE0A027083A3B00A359FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32DE09F27083A3B00A359FC /* Assets.xcassets */; };
 		E32DE0A327083A3B00A359FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32DE0A127083A3B00A359FC /* LaunchScreen.storyboard */; };
 		E32DE0B027083B9100A359FC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E32DE0AF27083B9100A359FC /* .swiftlint.yml */; };
+		E32DE0C127084D9200A359FC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0C027084D9200A359FC /* Kingfisher */; };
+		E32DE0C527084DEF00A359FC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0C427084DEF00A359FC /* CombineMoya */; };
+		E32DE0C727084DEF00A359FC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0C627084DEF00A359FC /* Moya */; };
+		E32DE0CB27084E2C00A359FC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0CA27084E2C00A359FC /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,19 +37,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32DE0C527084DEF00A359FC /* CombineMoya in Frameworks */,
+				E32DE0C127084D9200A359FC /* Kingfisher in Frameworks */,
+				E32DE0C727084DEF00A359FC /* Moya in Frameworks */,
+				E32DE0CB27084E2C00A359FC /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D4C40A6127084A930099CF28 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		D4C40A6227084A9F0099CF28 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				D4C40A6227084A9F0099CF28 /* Supporting Files */,
-				D4C40A6127084A930099CF28 /* Home */,
 				E32DE09627083A3A00A359FC /* AppDelegate.swift */,
 				E32DE09827083A3A00A359FC /* SceneDelegate.swift */,
 				E32DE09A27083A3A00A359FC /* ViewController.swift */,
@@ -127,6 +127,12 @@
 			dependencies = (
 			);
 			name = "Seehyang-iOS";
+			packageProductDependencies = (
+				E32DE0C027084D9200A359FC /* Kingfisher */,
+				E32DE0C427084DEF00A359FC /* CombineMoya */,
+				E32DE0C627084DEF00A359FC /* Moya */,
+				E32DE0CA27084E2C00A359FC /* Then */,
+			);
 			productName = "Seehyang-iOS";
 			productReference = E32DE09327083A3A00A359FC /* Seehyang-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +160,11 @@
 				Base,
 			);
 			mainGroup = E32DE08A27083A3900A359FC;
+			packageReferences = (
+				E32DE0BF27084D9200A359FC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E32DE0C327084DEF00A359FC /* XCRemoteSwiftPackageReference "Moya" */,
+				E32DE0C927084E2C00A359FC /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = E32DE09427083A3A00A359FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -405,6 +416,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E32DE0BF27084D9200A359FC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		E32DE0C327084DEF00A359FC /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		E32DE0C927084E2C00A359FC /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E32DE0C027084D9200A359FC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E32DE0BF27084D9200A359FC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		E32DE0C427084DEF00A359FC /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E32DE0C327084DEF00A359FC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		E32DE0C627084DEF00A359FC /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E32DE0C327084DEF00A359FC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		E32DE0CA27084E2C00A359FC /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E32DE0C927084E2C00A359FC /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E32DE08B27083A3900A359FC /* Project object */;
 }
