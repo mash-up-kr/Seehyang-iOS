@@ -1,5 +1,5 @@
 # 𝑺𝒆𝒆𝒉𝒚𝒂𝒏𝒈
-11기 떡좋진팀 iOS 레포입니다
+👀 🌹 Mash Up 11기 떡좋진팀 iOS 레포입니다 (ˊo̴̶̷̤ ᴗ o̴̶̷̤ˋ)·₊˚❀·₊˚ 
 
 ### Author 👩‍👦‍👦
 <table>
@@ -30,7 +30,7 @@
   
 ### gitmoji 😁
 * :tada: `:tada:` : Initial commit
-* :sparkles: `:sparkles:` : New feature
+* :rocket: `:rocket:` : New feature
 * :apple: `:apple:` : UI
 * :bug: `:bug:` : Bugfix
 * :books: `:books:` : Refactor code
