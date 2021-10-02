@@ -24,6 +24,9 @@
 		E32DE0C527084DEF00A359FC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0C427084DEF00A359FC /* CombineMoya */; };
 		E32DE0C727084DEF00A359FC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0C627084DEF00A359FC /* Moya */; };
 		E32DE0CB27084E2C00A359FC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0CA27084E2C00A359FC /* Then */; };
+		E347162C2708A67A0066F6A9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347162B2708A67A0066F6A9 /* UIStoryboard+Extension.swift */; };
+		E34716302708A6B30066F6A9 /* PerfumeStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347162F2708A6B30066F6A9 /* PerfumeStoryViewController.swift */; };
+		E34716332708A6BB0066F6A9 /* PerfumeStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		E32DE0A227083A3B00A359FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E32DE0A427083A3B00A359FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E32DE0AF27083B9100A359FC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E347162B2708A67A0066F6A9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		E347162F2708A6B30066F6A9 /* PerfumeStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStoryViewController.swift; sourceTree = "<group>"; };
+		E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfumeStory.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				235810782708A18A00D38734 /* UIView+Extension.swift */,
+				E347162B2708A67A0066F6A9 /* UIStoryboard+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -78,6 +85,7 @@
 		235810742708A0F200D38734 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E347162E2708A6A50066F6A9 /* PefrumeStory */,
 				235810752708A0F200D38734 /* PerfumeDetail */,
 			);
 			path = Sources;
@@ -139,6 +147,15 @@
 				E32DE0A127083A3B00A359FC /* LaunchScreen.storyboard */,
 			);
 			path = "Seehyang-iOS";
+			sourceTree = "<group>";
+		};
+		E347162E2708A6A50066F6A9 /* PefrumeStory */ = {
+			isa = PBXGroup;
+			children = (
+				E347162F2708A6B30066F6A9 /* PerfumeStoryViewController.swift */,
+				E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */,
+			);
+			path = PefrumeStory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +236,7 @@
 				2358106E27089AA400D38734 /* Assets.xcassets in Resources */,
 				235810772708A0FF00D38734 /* PerfumeDetail.storyboard in Resources */,
 				E32DE09E27083A3A00A359FC /* Main.storyboard in Resources */,
+				E34716332708A6BB0066F6A9 /* PerfumeStory.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +270,10 @@
 			files = (
 				E32DE09B27083A3A00A359FC /* ViewController.swift in Sources */,
 				D4B113632708A23A004E024E /* PaddingLabel.swift in Sources */,
+				E347162C2708A67A0066F6A9 /* UIStoryboard+Extension.swift in Sources */,
 				E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */,
 				235810792708A18A00D38734 /* UIView+Extension.swift in Sources */,
+				E34716302708A6B30066F6A9 /* PerfumeStoryViewController.swift in Sources */,
 				E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
