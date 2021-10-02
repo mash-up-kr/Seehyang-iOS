@@ -57,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				E32DE0A427083A3B00A359FC /* Info.plist */,
-				D4C40A6A27084FE20099CF28 /* Sources */,
 				D4C40A6427084AB40099CF28 /* Resources */,
 				D4C40A6327084AAC0099CF28 /* Extensions */,
 			);
@@ -84,6 +83,7 @@
 			children = (
 			);
 			name = Sources;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E32DE08A27083A3900A359FC = {
@@ -107,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C40A6227084A9F0099CF28 /* Supporting Files */,
+				D4C40A6A27084FE20099CF28 /* Sources */,
 				E32DE09627083A3A00A359FC /* AppDelegate.swift */,
 				E32DE09827083A3A00A359FC /* SceneDelegate.swift */,
 				E32DE09A27083A3A00A359FC /* ViewController.swift */,
