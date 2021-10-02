@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4C40A6D270851EC0099CF28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */; };
+		D4C40A6F270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */; };
+		D4C40A71270851EC0099CF28 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A70270851EC0099CF28 /* FirebaseCrashlytics */; };
 		E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09627083A3A00A359FC /* AppDelegate.swift */; };
 		E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09827083A3A00A359FC /* SceneDelegate.swift */; };
 		E32DE09B27083A3A00A359FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09A27083A3A00A359FC /* ViewController.swift */; };
@@ -37,9 +40,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C40A6F270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
 				E32DE0C527084DEF00A359FC /* CombineMoya in Frameworks */,
 				E32DE0C127084D9200A359FC /* Kingfisher in Frameworks */,
+				D4C40A71270851EC0099CF28 /* FirebaseCrashlytics in Frameworks */,
 				E32DE0C727084DEF00A359FC /* Moya in Frameworks */,
+				D4C40A6D270851EC0099CF28 /* FirebaseAnalytics in Frameworks */,
 				E32DE0CB27084E2C00A359FC /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +138,9 @@
 				E32DE0C427084DEF00A359FC /* CombineMoya */,
 				E32DE0C627084DEF00A359FC /* Moya */,
 				E32DE0CA27084E2C00A359FC /* Then */,
+				D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */,
+				D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */,
+				D4C40A70270851EC0099CF28 /* FirebaseCrashlytics */,
 			);
 			productName = "Seehyang-iOS";
 			productReference = E32DE09327083A3A00A359FC /* Seehyang-iOS.app */;
@@ -164,6 +173,7 @@
 				E32DE0BF27084D9200A359FC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				E32DE0C327084DEF00A359FC /* XCRemoteSwiftPackageReference "Moya" */,
 				E32DE0C927084E2C00A359FC /* XCRemoteSwiftPackageReference "Then" */,
+				D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = E32DE09427083A3A00A359FC /* Products */;
 			projectDirPath = "";
@@ -418,6 +428,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		E32DE0BF27084D9200A359FC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -445,6 +463,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+		D4C40A70270851EC0099CF28 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		E32DE0C027084D9200A359FC /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E32DE0BF27084D9200A359FC /* XCRemoteSwiftPackageReference "Kingfisher" */;
