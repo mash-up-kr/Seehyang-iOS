@@ -31,6 +31,9 @@ class PerfumeStoryCommentViewController: UIViewController {
     private func setup() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        self.view.layer.cornerRadius = 20
+        self.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
 }
 
