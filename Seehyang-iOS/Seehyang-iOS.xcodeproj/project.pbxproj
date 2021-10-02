@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2358106E27089AA400D38734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2358106D27089AA400D38734 /* Assets.xcassets */; };
 		D4C40A6D270851EC0099CF28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */; };
 		D4C40A6F270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */; };
 		D4C40A71270851EC0099CF28 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A70270851EC0099CF28 /* FirebaseCrashlytics */; };
@@ -14,7 +15,6 @@
 		E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09827083A3A00A359FC /* SceneDelegate.swift */; };
 		E32DE09B27083A3A00A359FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09A27083A3A00A359FC /* ViewController.swift */; };
 		E32DE09E27083A3A00A359FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32DE09C27083A3A00A359FC /* Main.storyboard */; };
-		E32DE0A027083A3B00A359FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32DE09F27083A3B00A359FC /* Assets.xcassets */; };
 		E32DE0A327083A3B00A359FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32DE0A127083A3B00A359FC /* LaunchScreen.storyboard */; };
 		E32DE0B027083B9100A359FC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E32DE0AF27083B9100A359FC /* .swiftlint.yml */; };
 		E32DE0C127084D9200A359FC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E32DE0C027084D9200A359FC /* Kingfisher */; };
@@ -24,12 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2358106D27089AA400D38734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E32DE09327083A3A00A359FC /* Seehyang-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seehyang-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32DE09627083A3A00A359FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E32DE09827083A3A00A359FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E32DE09A27083A3A00A359FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E32DE09D27083A3A00A359FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E32DE09F27083A3B00A359FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E32DE0A227083A3B00A359FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E32DE0A427083A3B00A359FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E32DE0AF27083B9100A359FC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -53,11 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2358106C27089AA400D38734 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2358106D27089AA400D38734 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D4C40A6227084A9F0099CF28 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				E32DE0A427083A3B00A359FC /* Info.plist */,
-				D4C40A6427084AB40099CF28 /* Resources */,
+				2358106C27089AA400D38734 /* Resources */,
 				D4C40A6327084AAC0099CF28 /* Extensions */,
 			);
 			path = "Supporting Files";
@@ -68,14 +76,6 @@
 			children = (
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		D4C40A6427084AB40099CF28 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E32DE09F27083A3B00A359FC /* Assets.xcassets */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		D4C40A6A27084FE20099CF28 /* Sources */ = {
@@ -192,7 +192,7 @@
 			files = (
 				E32DE0B027083B9100A359FC /* .swiftlint.yml in Resources */,
 				E32DE0A327083A3B00A359FC /* LaunchScreen.storyboard in Resources */,
-				E32DE0A027083A3B00A359FC /* Assets.xcassets in Resources */,
+				2358106E27089AA400D38734 /* Assets.xcassets in Resources */,
 				E32DE09E27083A3A00A359FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
