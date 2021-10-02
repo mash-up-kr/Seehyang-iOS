@@ -57,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				E32DE0A427083A3B00A359FC /* Info.plist */,
+				D4C40A77270895470099CF28 /* Components */,
 				D4C40A6427084AB40099CF28 /* Resources */,
 				D4C40A6327084AAC0099CF28 /* Extensions */,
 			);
@@ -84,6 +85,13 @@
 			);
 			name = Sources;
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4C40A77270895470099CF28 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E32DE08A27083A3900A359FC = {
