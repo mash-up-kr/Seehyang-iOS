@@ -29,6 +29,9 @@
 		E34716332708A6BB0066F6A9 /* PerfumeStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */; };
 		E34716382708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34716372708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift */; };
 		E347163B2708AB320066F6A9 /* PerfumeStoryOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347163A2708AB320066F6A9 /* PerfumeStoryOrder.storyboard */; };
+		E347163F2708DAFC0066F6A9 /* PerfumeStoryCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347163E2708DAFC0066F6A9 /* PerfumeStoryCommentViewController.swift */; };
+		E34716432708DB020066F6A9 /* PerfumeStoryComment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34716422708DB020066F6A9 /* PerfumeStoryComment.storyboard */; };
+		E3471646270910390066F6A9 /* PerfumeStoryCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3471645270910390066F6A9 /* PerfumeStoryCommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfumeStory.storyboard; sourceTree = "<group>"; };
 		E34716372708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStoryOrderViewContoller.swift; sourceTree = "<group>"; };
 		E347163A2708AB320066F6A9 /* PerfumeStoryOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfumeStoryOrder.storyboard; sourceTree = "<group>"; };
+		E347163E2708DAFC0066F6A9 /* PerfumeStoryCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStoryCommentViewController.swift; sourceTree = "<group>"; };
+		E34716422708DB020066F6A9 /* PerfumeStoryComment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfumeStoryComment.storyboard; sourceTree = "<group>"; };
+		E3471645270910390066F6A9 /* PerfumeStoryCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStoryCommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				E34716352708AB0D0066F6A9 /* PerfumeStoryOrder */,
+				E347163D2708DADE0066F6A9 /* PerfumeStoryComment */,
 				E347162F2708A6B30066F6A9 /* PerfumeStoryViewController.swift */,
 				E34716322708A6BB0066F6A9 /* PerfumeStory.storyboard */,
 			);
@@ -170,6 +177,16 @@
 				E347163A2708AB320066F6A9 /* PerfumeStoryOrder.storyboard */,
 			);
 			path = PerfumeStoryOrder;
+			sourceTree = "<group>";
+		};
+		E347163D2708DADE0066F6A9 /* PerfumeStoryComment */ = {
+			isa = PBXGroup;
+			children = (
+				E347163E2708DAFC0066F6A9 /* PerfumeStoryCommentViewController.swift */,
+				E34716422708DB020066F6A9 /* PerfumeStoryComment.storyboard */,
+				E3471645270910390066F6A9 /* PerfumeStoryCommentTableViewCell.swift */,
+			);
+			path = PerfumeStoryComment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +267,7 @@
 				E32DE0A327083A3B00A359FC /* LaunchScreen.storyboard in Resources */,
 				2358106E27089AA400D38734 /* Assets.xcassets in Resources */,
 				235810772708A0FF00D38734 /* PerfumeDetail.storyboard in Resources */,
+				E34716432708DB020066F6A9 /* PerfumeStoryComment.storyboard in Resources */,
 				E32DE09E27083A3A00A359FC /* Main.storyboard in Resources */,
 				E34716332708A6BB0066F6A9 /* PerfumeStory.storyboard in Resources */,
 			);
@@ -289,6 +307,8 @@
 				E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */,
 				235810792708A18A00D38734 /* UIView+Extension.swift in Sources */,
 				E34716382708AB220066F6A9 /* PerfumeStoryOrderViewContoller.swift in Sources */,
+				E3471646270910390066F6A9 /* PerfumeStoryCommentTableViewCell.swift in Sources */,
+				E347163F2708DAFC0066F6A9 /* PerfumeStoryCommentViewController.swift in Sources */,
 				E34716302708A6B30066F6A9 /* PerfumeStoryViewController.swift in Sources */,
 				E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */,
 			);

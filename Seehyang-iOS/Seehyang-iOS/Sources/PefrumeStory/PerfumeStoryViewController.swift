@@ -26,6 +26,19 @@ class PerfumeStoryViewController: UIViewController {
         }
     }
     
+    // MARK: - IBAction
+    @IBAction func commentButtonIsTapped(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "PerfumeStoryComment", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: PerfumeStoryCommentViewController.identifier) as? PerfumeStoryCommentViewController else {
+             return
+        }
+        
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    
     // MAKR: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
