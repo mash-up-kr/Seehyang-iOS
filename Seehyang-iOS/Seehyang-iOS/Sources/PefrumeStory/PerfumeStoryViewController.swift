@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PerfumeStoryChanagable: class {
+    func orderButtonIsChanged(_ state: OrderButtonState)
+}
+
 class PerfumeStoryViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -16,6 +20,11 @@ class PerfumeStoryViewController: UIViewController {
     
     // MARK: - Variable
     private var storyCount: Int = 10
+    var orderButtonState: OrderButtonState = OrderButtonState.popular {
+        didSet {
+            setOrderButtonText()
+        }
+    }
     
     // MAKR: - View Life cycle
     override func viewDidLoad() {
@@ -25,11 +34,14 @@ class PerfumeStoryViewController: UIViewController {
     }
     
     @IBAction private func orderButtonIsTapped(_ sender: UIButton) {
-        
-        guard let viewController: UIViewController = UIStoryboard(name: "PerfumeStoryOrder", bundle: nil).instantiateViewController(withIdentifier: PerfumeStoryOrderViewController.identifier) as? PerfumeStoryOrderViewController else {
+ 
+        let storyboard: UIStoryboard = UIStoryboard(name: "PerfumeStoryOrder", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: PerfumeStoryOrderViewController.identifier) as? PerfumeStoryOrderViewController else {
             return
         }
         
+        viewController.delegate = self
+        viewController.orderButtonState = self.orderButtonState
         viewController.modalPresentationStyle = .overFullScreen
         viewController.modalTransitionStyle = .crossDissolve
         
@@ -51,6 +63,44 @@ class PerfumeStoryViewController: UIViewController {
         self.orderButton.backgroundColor = .white
         self.orderButton.layer.borderWidth = 1
         self.orderButton.layer.cornerRadius = 5
-        self.orderButton.setTitle("  인기순 ↓  ", for: .normal)
+        self.orderButton.setTitle(orderButtonState.orderButtonText, for: .normal)
+    }
+    
+    private func setOrderButtonText() {
+        self.orderButton.setTitle(orderButtonState.orderButtonText, for: .normal)
+    }
+}
+
+extension PerfumeStoryViewController: PerfumeStoryChanagable {
+    func orderButtonIsChanged(_ state: OrderButtonState) {
+        self.orderButtonState = state
+    }
+}
+
+enum OrderButtonState {
+    case popular
+    case recent
+    case maximum
+    
+    var orderButtonText: String {
+        switch self {
+        case .popular:
+            return " 인기순 ↓ "
+        case .recent:
+            return " 최신 등록순 ↓ "
+        case .maximum:
+            return " 최다 댓글순 ↓ "
+        }
+    }
+    
+    func orderButtonIsTapped(buttonArray: [UIButton], selectedButton: UIButton) {
+    
+        buttonArray.forEach { button in
+            if button == selectedButton {
+                button.setImage(UIImage(named: "check_circle_24px"), for: .normal)
+            } else {
+                button.setImage(UIImage(named: "check_circle_outline_24px"), for: .normal)
+            }
+        }
     }
 }
