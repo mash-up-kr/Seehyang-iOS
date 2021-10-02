@@ -71,6 +71,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+        D4C40A6A27084FE20099CF28 /* Sources */ = {
+            isa = PBXGroup;
+            children = (
+            );
+            name = Sources;
+            path = "Supporting Files";
+            sourceTree = "<group>";
+        };
 		D4C40A6327084AAC0099CF28 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +86,7 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		D4C40A6A27084FE20099CF28 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Sources;
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
+
 		E32DE08A27083A3900A359FC = {
 			isa = PBXGroup;
 			children = (
