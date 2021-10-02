@@ -13,6 +13,10 @@
 		D4523ACB2708367A00B19A8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4523AC92708367A00B19A8C /* Main.storyboard */; };
 		D4523ACD2708367B00B19A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4523ACC2708367B00B19A8C /* Assets.xcassets */; };
 		D4523AD02708367B00B19A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4523ACE2708367B00B19A8C /* LaunchScreen.storyboard */; };
+		D4523AD9270836DD00B19A8C /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D4523AD8270836DD00B19A8C /* CombineMoya */; };
+		D4523ADB270836DD00B19A8C /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D4523ADA270836DD00B19A8C /* Moya */; };
+		D4523ADE270836EB00B19A8C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D4523ADD270836EB00B19A8C /* Kingfisher */; };
+		D4523AE1270836FA00B19A8C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D4523AE0270836FA00B19A8C /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4523ADE270836EB00B19A8C /* Kingfisher in Frameworks */,
+				D4523ADB270836DD00B19A8C /* Moya in Frameworks */,
+				D4523AD9270836DD00B19A8C /* CombineMoya in Frameworks */,
+				D4523AE1270836FA00B19A8C /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,12 @@
 			dependencies = (
 			);
 			name = Seehyang;
+			packageProductDependencies = (
+				D4523AD8270836DD00B19A8C /* CombineMoya */,
+				D4523ADA270836DD00B19A8C /* Moya */,
+				D4523ADD270836EB00B19A8C /* Kingfisher */,
+				D4523AE0270836FA00B19A8C /* Then */,
+			);
 			productName = Seehyang;
 			productReference = D4523AC02708367A00B19A8C /* Seehyang.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,11 @@
 				Base,
 			);
 			mainGroup = D4523AB72708367A00B19A8C;
+			packageReferences = (
+				D4523AD7270836DD00B19A8C /* XCRemoteSwiftPackageReference "Moya" */,
+				D4523ADC270836EB00B19A8C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D4523ADF270836FA00B19A8C /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = D4523AC12708367A00B19A8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +379,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4523AD7270836DD00B19A8C /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D4523ADC270836EB00B19A8C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D4523ADF270836FA00B19A8C /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4523AD8270836DD00B19A8C /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4523AD7270836DD00B19A8C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		D4523ADA270836DD00B19A8C /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4523AD7270836DD00B19A8C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		D4523ADD270836EB00B19A8C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4523ADC270836EB00B19A8C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		D4523AE0270836FA00B19A8C /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4523ADF270836FA00B19A8C /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4523AB82708367A00B19A8C /* Project object */;
 }
