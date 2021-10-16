@@ -14,9 +14,6 @@ opt_in_rules:
     # force unwrapping을 하지 않습니다.
     - force_unwrapping
 
-    # 프로퍼티의 타입을 명시해야합니다.
-    - explicit_type_interface
-
 
 # Options
 type_body_length:
