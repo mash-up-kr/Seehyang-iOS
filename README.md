@@ -33,11 +33,11 @@
 * :rocket: `:rocket:` : New feature
 * :apple: `:apple:` : UI
 * :bug: `:bug:` : Bugfix
-* :books: `:books:` : Refactor code
-* :ambulance: `:ambulance:` : Documentation
+* :books: `:books:` : Documentation
 * :art: `:art:` : Improve format/structure
 * :hammer: `:hammer:` : Refactor code
 * :hankey: `:hankey:` : Bad code / need improve
 * :package: `:package:` : SPM
 * :shirt: `:shirt:` : Lint
 * :ambulance: `:ambulance:` : Critical hotfix	
+* :broom: `:broom:` : Chore
