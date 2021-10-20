@@ -8,5 +8,9 @@
 import UIKit
 
 class LovePerfumeCollectionViewCell: UICollectionViewCell {
-    
+    static let identifier: String = "LovePerfumeCollectionViewCell"
+    @IBOutlet weak var perfumeImageView: UIImageView!
+    @IBOutlet weak var perfumeBrandLabel: UILabel!
+    @IBOutlet weak var perfumeNameLabel: UILabel!
+    @IBOutlet weak var likesCountLabel: UILabel!
 }
