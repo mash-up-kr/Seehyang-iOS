@@ -7,6 +7,7 @@
 
 import UIKit
 import Moya
+import Kingfisher
 
 final class HomeViewController: UIViewController {
     
@@ -14,9 +15,9 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet weak var todayPerfumeLabel: UILabel!
     
-    @IBOutlet weak var todayPerfumeCollectionView: UICollectionView!
+    @IBOutlet weak var todayStoryCollectionView: UICollectionView!
     
-    @IBOutlet weak var popularRankingCollectionView: UICollectionView!
+    @IBOutlet weak var weeklyRankingCollectionView: UICollectionView!
     
     @IBOutlet weak var hotStoryCollectionView: UICollectionView!
     
@@ -36,13 +37,23 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet weak var lovePerfumeCollectionViewHeight: NSLayoutConstraint!
     
+    var homeTodayStories: [HomeTodayStory] = [] {
+        didSet { todayStoryCollectionView.reloadData() }
+    }
+    
+    var homeWeeklyRankingPerfumes: [HomeWeeklyRankingPerfume] = [] {
+        didSet { weeklyRankingCollectionView.reloadData() }
+    }
+    
+    var homeHotStories: [HomeHotStoryDetail] = [] {
+        didSet { hotStoryCollectionView.reloadData() }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        colorTodayPerfume("톰포드 네롤리 포르토피노")
         getHomeHotStory()
-        getHomeTodayData()
+        getHomeTodayPerfume()
         getHomeWeeklyRanking()
     }
     
@@ -67,11 +78,11 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func refreshTodayPerfume(_ sender: UIButton) {
-        
+        getHomeTodayPerfume()
     }
     
     @objc func refreshButtonImageViewPressed() {
-        
+        getHomeTodayPerfume()
     }
     
     @IBAction func moreButtonPressed(_ sender: UIButton) {
@@ -106,48 +117,18 @@ final class HomeViewController: UIViewController {
         todayPerfumeLabel.attributedText = attributedStr
     }
     
-    /*  Description  :  오늘의 향수 정보 API 통신 */
-    private func getHomeTodayData() {
-        NetworkProvider.shared.requestHomeToday { result in
-            switch result {
-            case .success(let data):
-                if let data = data.data {
-                    print(data.perfume)
-                    print(data.stories)
-                }
-            case .failure(let error):
-                print(error)
-            }
+    /*  Description  :  오늘의 향수 정보 UI 업데이트 */
+    func updateTodayPerfume(_ todayPerfume: HomeTodayPerfume) {
+        if let url = URL(string: Constants.S3URL + todayPerfume.thumbnail) {
+            todayPerfumeImageView.kf.setImage(with: url)
+        } else {
+            todayPerfumeImageView.image = UIImage(named: Constants.testImageName)
         }
+
+        todayPerfumeLabel.text = "\(todayPerfume.name)를\n눈으로 시향해 보세요."
+        colorTodayPerfume(todayPerfume.name)
     }
     
-    /*  Description  :  오늘의 향수 핫한 스토리 API 통신 */
-    private func getHomeHotStory() {
-        NetworkProvider.shared.requestHomeHotStory { result in
-            switch result {
-            case .success(let data):
-                if let data = data.data {
-                    print(data.stories)
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-    
-    /*  Description  :  오늘의 향수 주간 랭킹 API 통신 */
-    private func getHomeWeeklyRanking() {
-        NetworkProvider.shared.requestHomeWeeklyRanking { result in
-            switch result {
-            case .success(let data):
-                if let data = data.data {
-                    print(data.perfumes)
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
 }
 
 // MARK: setup
@@ -160,11 +141,12 @@ extension HomeViewController {
         setupHotStoryCollectionView()
         setupLovePerfumeCollectionView()
         setupHomeBannerView()
+        setupMoreButtonImageView()
     }
     
     private func setupTodayPerfumeCollectionView() {
-        todayPerfumeCollectionView.delegate = self
-        todayPerfumeCollectionView.dataSource = self
+        todayStoryCollectionView.delegate = self
+        todayStoryCollectionView.dataSource = self
         
         let width: CGFloat = ((view.bounds.width - 55) - 16) / 2
         let height: CGFloat = width * 134.0 / 156.0
@@ -173,8 +155,8 @@ extension HomeViewController {
     }
     
     private func setupPopularRankingCollectionView() {
-        popularRankingCollectionView.delegate = self
-        popularRankingCollectionView.dataSource = self
+        weeklyRankingCollectionView.delegate = self
+        weeklyRankingCollectionView.dataSource = self
         let width: CGFloat = ((view.bounds.width - 108) - 16) / 2
         let height: CGFloat = width * 196.0 / 130.0
         popularRankingCollectionViewHeight.constant = height
@@ -216,12 +198,12 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
-        case todayPerfumeCollectionView:
-            return 10
-        case popularRankingCollectionView:
-            return 10
+        case todayStoryCollectionView:
+            return homeTodayStories.count
+        case weeklyRankingCollectionView:
+            return homeWeeklyRankingPerfumes.count
         case hotStoryCollectionView:
-            return 10
+            return homeHotStories.count
         case lovePerfumeCollectionView:
             return 6
         default:
@@ -231,18 +213,17 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
-        case todayPerfumeCollectionView:
+        case todayStoryCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayPerfumeCollectionViewCell.identifier, for: indexPath) as? TodayPerfumeCollectionViewCell else { return UICollectionViewCell() }
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
+            cell.setupCells(homeTodayStories[indexPath.item])
             return cell
-        case popularRankingCollectionView:
+        case weeklyRankingCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularRankingCollectionViewCell.identifier, for: indexPath) as? PopularRankingCollectionViewCell else { return UICollectionViewCell() }
-            
+            cell.setupCells(homeWeeklyRankingPerfumes[indexPath.item], indexPath)
             return cell
         case hotStoryCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HotStoryCollectionViewCell.identifier, for: indexPath) as? HotStoryCollectionViewCell else { return UICollectionViewCell() }
-            
+            cell.setupCells(homeHotStories[indexPath.item])
             return cell
         case lovePerfumeCollectionView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LovePerfumeCollectionViewCell.identifier, for: indexPath) as? LovePerfumeCollectionViewCell else { return UICollectionViewCell() }
@@ -257,9 +238,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         switch collectionView {
-        case todayPerfumeCollectionView:
+        case todayStoryCollectionView:
             return 8
-        case popularRankingCollectionView:
+        case weeklyRankingCollectionView:
             return 8
         case hotStoryCollectionView:
             return 8
@@ -273,11 +254,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewHeight: CGFloat = collectionView.bounds.height
         switch collectionView {
-        case todayPerfumeCollectionView:
+        case todayStoryCollectionView:
             let height = collectionViewHeight
             let width = height * 156.0 / 134.0
             return CGSize(width: width, height: height)
-        case popularRankingCollectionView:
+        case weeklyRankingCollectionView:
             let height = collectionViewHeight
             let width = height * 130.0 / 196.0
             return CGSize(width: width, height: height)

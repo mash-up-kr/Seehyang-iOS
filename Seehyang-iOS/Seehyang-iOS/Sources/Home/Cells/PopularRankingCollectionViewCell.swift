@@ -24,4 +24,17 @@ class PopularRankingCollectionViewCell: UICollectionViewCell {
         perfumeWrapperView.layer.cornerRadius = 10
         perfumeWrapperView.layer.masksToBounds = true
     }
+    
+    func setupCells(_ perfume: HomeWeeklyRankingPerfume, _ indexPath: IndexPath) {
+        rankingLabel.text = "\(indexPath.item + 1)"
+        
+        if let url = URL(string: Constants.S3URL + "\(perfume.perfumeImageURL)") {
+            perfumeImageView.kf.setImage(with: url)
+        }
+        
+        perfumeBrandLabel.text = perfume.brandName
+        
+        perfumeNameLabel.text = perfume.perfumeName
+    
+    }
 }

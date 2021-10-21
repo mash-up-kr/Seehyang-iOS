@@ -28,6 +28,8 @@
 		D4EC661C2721D22800F80F0B /* HomeToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC661B2721D22800F80F0B /* HomeToday.swift */; };
 		D4EC661E2721D49700F80F0B /* HomeHotStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC661D2721D49700F80F0B /* HomeHotStory.swift */; };
 		D4EC66202721D52C00F80F0B /* HomeWeeklyRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC661F2721D52C00F80F0B /* HomeWeeklyRanking.swift */; };
+		D4EC66232721DB9A00F80F0B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC66222721DB9A00F80F0B /* Constants.swift */; };
+		D4EC66252721E25500F80F0B /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC66242721E25500F80F0B /* HomeService.swift */; };
 		E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09627083A3A00A359FC /* AppDelegate.swift */; };
 		E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09827083A3A00A359FC /* SceneDelegate.swift */; };
 		E32DE09B27083A3A00A359FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32DE09A27083A3A00A359FC /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 		D4EC661B2721D22800F80F0B /* HomeToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeToday.swift; sourceTree = "<group>"; };
 		D4EC661D2721D49700F80F0B /* HomeHotStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHotStory.swift; sourceTree = "<group>"; };
 		D4EC661F2721D52C00F80F0B /* HomeWeeklyRanking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWeeklyRanking.swift; sourceTree = "<group>"; };
+		D4EC66222721DB9A00F80F0B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D4EC66242721E25500F80F0B /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		E32DE09327083A3A00A359FC /* Seehyang-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seehyang-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32DE09627083A3A00A359FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E32DE09827083A3A00A359FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				D4A73234271B44A4000B6792 /* Home.storyboard */,
 				D4EC66172721C33200F80F0B /* LovePerfumeListViewController.swift */,
 				D4A73233271B44A4000B6792 /* HomeViewController.swift */,
+				D4EC66242721E25500F80F0B /* HomeService.swift */,
+				D4EC66222721DB9A00F80F0B /* Constants.swift */,
 				D4EC66212721D6BB00F80F0B /* Models */,
 				D4EC66162721C2FE00F80F0B /* Cells */,
 			);
@@ -326,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EC661A2721D15B00F80F0B /* GenericResponse.swift in Sources */,
+				D4EC66232721DB9A00F80F0B /* Constants.swift in Sources */,
 				E32DE09B27083A3A00A359FC /* ViewController.swift in Sources */,
 				D4EC66202721D52C00F80F0B /* HomeWeeklyRanking.swift in Sources */,
 				D4B113632708A23A004E024E /* PaddingLabel.swift in Sources */,
@@ -338,6 +345,7 @@
 				23581093271B21C300D38734 /* PerfumeDetail.swift in Sources */,
 				D4A7DC0827201688001ECDE2 /* HotStoryCollectionViewCell.swift in Sources */,
 				D4A7DC0A27201694001ECDE2 /* LovePerfumeCollectionViewCell.swift in Sources */,
+				D4EC66252721E25500F80F0B /* HomeService.swift in Sources */,
 				23581090271B21BB00D38734 /* NetworkProvider.swift in Sources */,
 				23581091271B21BB00D38734 /* NetworkService.swift in Sources */,
 				D4A73238271B6445000B6792 /* TodayPerfumeCollectionViewCell.swift in Sources */,

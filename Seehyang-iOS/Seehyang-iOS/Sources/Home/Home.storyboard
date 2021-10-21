@@ -23,13 +23,16 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQ7-NF-R7W">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2767"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2754"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-br-lN1">
-                                                <rect key="frame" x="20" y="20" width="120" height="150"/>
+                                                <rect key="frame" x="20" y="20" width="110.5" height="137"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1" translatesAutoresizingMaskIntoConstraints="NO" id="1a0-7T-hnY">
-                                                        <rect key="frame" x="10" y="8" width="100" height="134"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1a0-7T-hnY">
+                                                        <rect key="frame" x="10" y="8" width="90.5" height="121"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="1a0-7T-hnY" secondAttribute="height" multiplier="100:134" id="3SO-Ui-i6s"/>
+                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,7 +44,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-To-4zl">
-                                                <rect key="frame" x="156" y="99" width="195.5" height="63"/>
+                                                <rect key="frame" x="146.5" y="129" width="212.5" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 시향" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-Am-CHx">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="16"/>
@@ -49,18 +52,16 @@
                                                         <color key="textColor" name="grey4"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcH-mM-X8q">
-                                                        <rect key="frame" x="0.0" y="20" width="195.5" height="43"/>
-                                                        <string key="text">톰포드 네롤리 포르토피노를
-눈으로 시향해 보세요.</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcH-mM-X8q">
+                                                        <rect key="frame" x="0.0" y="20" width="0.0" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <color key="textColor" name="point"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEj-7H-Ibd">
-                                                <rect key="frame" x="0.0" y="186" width="414" height="134"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEj-7H-Ibd">
+                                                <rect key="frame" x="0.0" y="173" width="414" height="134"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="134" id="fDw-ec-akU"/>
@@ -79,7 +80,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="167" height="134"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test2" translatesAutoresizingMaskIntoConstraints="NO" id="KiX-G3-0nj">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KiX-G3-0nj">
                                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="134"/>
                                                                 </imageView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryCard_2 Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="EYo-x6-hzV">
@@ -132,7 +133,7 @@
                                                 </connections>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qxp-eZ-ujv">
-                                                <rect key="frame" x="159.5" y="344" width="95" height="28"/>
+                                                <rect key="frame" x="159.5" y="331" width="95" height="28"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcB-Fk-KRD">
                                                         <rect key="frame" x="0.0" y="0.0" width="75" height="28"/>
@@ -151,7 +152,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0WV-Y4-h2h">
-                                                <rect key="frame" x="0.0" y="392" width="414" height="294.5"/>
+                                                <rect key="frame" x="0.0" y="379" width="414" height="294.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주간 인기랭킹" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-VF-B7W">
                                                         <rect key="frame" x="20" y="32" width="87" height="19.5"/>
@@ -159,7 +160,7 @@
                                                         <color key="textColor" name="point"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="psO-cN-JNh">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="psO-cN-JNh">
                                                         <rect key="frame" x="0.0" y="67.5" width="414" height="196"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -266,13 +267,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금 HOT한 씨향지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCp-DC-5U3">
-                                                <rect key="frame" x="20" y="726.5" width="125.5" height="19.5"/>
+                                                <rect key="frame" x="20" y="713.5" width="125.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" name="point"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aC9-Z7-0D3">
-                                                <rect key="frame" x="0.0" y="762" width="414" height="283"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aC9-Z7-0D3">
+                                                <rect key="frame" x="0.0" y="749" width="414" height="283"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="283" id="4pr-xs-Q2m"/>
@@ -377,6 +378,7 @@
                                                             <outlet property="likesCountLabel" destination="4Dc-42-2mV" id="NTf-Gh-0XK"/>
                                                             <outlet property="nickNameLabel" destination="TSN-Zx-uuC" id="sg3-52-1yt"/>
                                                             <outlet property="perfumeImageView" destination="Bva-Zb-lxE" id="ciH-UV-rbs"/>
+                                                            <outlet property="perfumeNameLabel" destination="sJc-zJ-ahx" id="sAb-va-Wev"/>
                                                             <outlet property="profileImageView" destination="pnn-F5-7u3" id="l37-W6-7CT"/>
                                                             <outlet property="storyImageView" destination="vWs-ln-RT3" id="vLy-vd-Fwz"/>
                                                         </connections>
@@ -384,7 +386,7 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꾸준히 사랑받는 향수" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjH-IG-C4O">
-                                                <rect key="frame" x="20" y="1207.5" width="132.5" height="19.5"/>
+                                                <rect key="frame" x="20" y="1194.5" width="132.5" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19.5" id="AgV-qt-wqa"/>
                                                 </constraints>
@@ -393,7 +395,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLG-SJ-YaV">
-                                                <rect key="frame" x="20" y="1085" width="374" height="82.5"/>
+                                                <rect key="frame" x="20" y="1072" width="374" height="82.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="aS3-W1-JWZ">
                                                         <rect key="frame" x="20" y="18" width="173" height="49.5"/>
@@ -428,7 +430,7 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-rJ-6Yq">
-                                                <rect key="frame" x="0.0" y="1243" width="414" height="1400"/>
+                                                <rect key="frame" x="0.0" y="1230" width="414" height="1400"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1400" id="e0e-k8-zjJ"/>
@@ -519,8 +521,8 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HS7-PN-JLE">
-                                                <rect key="frame" x="172" y="2675" width="70" height="32"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HS7-PN-JLE">
+                                                <rect key="frame" x="174" y="2662" width="66" height="32"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeS-za-B4n">
                                                         <rect key="frame" x="0.0" y="0.0" width="42" height="32"/>
@@ -530,13 +532,11 @@
                                                             <color key="titleColor" name="grey4"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="gotoLovePerfumeListViewController:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xdc-ml-gjf"/>
                                                             <action selector="moreButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="y71-4B-ADA"/>
-                                                            <action selector="refreshTodayPerfume:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T5l-9Y-TCT"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron_left_24px" translatesAutoresizingMaskIntoConstraints="NO" id="MQP-4r-pYq">
-                                                        <rect key="frame" x="46" y="4" width="24" height="24"/>
+                                                        <rect key="frame" x="42" y="4" width="24" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="MQP-4r-pYq" secondAttribute="height" id="DkR-jh-r4Q"/>
                                                         </constraints>
@@ -566,8 +566,10 @@
                                             <constraint firstItem="KEj-7H-Ibd" firstAttribute="top" secondItem="eaN-br-lN1" secondAttribute="bottom" constant="16" id="U14-Nm-PTe"/>
                                             <constraint firstItem="g7Q-To-4zl" firstAttribute="bottom" secondItem="1a0-7T-hnY" secondAttribute="bottom" id="W6I-u5-UVf"/>
                                             <constraint firstItem="MCp-DC-5U3" firstAttribute="top" secondItem="0WV-Y4-h2h" secondAttribute="bottom" constant="40" id="WXg-ZV-KN6"/>
+                                            <constraint firstItem="eaN-br-lN1" firstAttribute="width" secondItem="bQ7-NF-R7W" secondAttribute="width" multiplier="0.26666" id="X4P-qd-eB1"/>
                                             <constraint firstItem="g7Q-To-4zl" firstAttribute="leading" secondItem="eaN-br-lN1" secondAttribute="trailing" constant="16" id="YBM-XE-X47"/>
                                             <constraint firstItem="eaN-br-lN1" firstAttribute="leading" secondItem="bQ7-NF-R7W" secondAttribute="leading" constant="20" id="ZAh-j1-gKj"/>
+                                            <constraint firstAttribute="trailing" secondItem="g7Q-To-4zl" secondAttribute="trailing" constant="55" id="bel-qK-l97"/>
                                             <constraint firstItem="aC9-Z7-0D3" firstAttribute="leading" secondItem="bQ7-NF-R7W" secondAttribute="leading" id="d07-QZ-dIc"/>
                                             <constraint firstAttribute="trailing" secondItem="0WV-Y4-h2h" secondAttribute="trailing" id="e8K-jv-uUD"/>
                                             <constraint firstItem="SjH-IG-C4O" firstAttribute="top" secondItem="wLG-SJ-YaV" secondAttribute="bottom" constant="40" id="p5J-Vu-Cme"/>
@@ -663,13 +665,13 @@
                         <outlet property="lovePerfumeCollectionView" destination="fl4-rJ-6Yq" id="wQi-GW-b4E"/>
                         <outlet property="lovePerfumeCollectionViewHeight" destination="e0e-k8-zjJ" id="6jJ-tQ-7kJ"/>
                         <outlet property="moreButtonImageView" destination="MQP-4r-pYq" id="AP0-Nz-UPj"/>
-                        <outlet property="popularRankingCollectionView" destination="psO-cN-JNh" id="zzX-ot-2ox"/>
                         <outlet property="popularRankingCollectionViewHeight" destination="H1R-jU-fgu" id="p4s-qm-Wgv"/>
                         <outlet property="refreshButtonImageView" destination="ypW-Uw-lVy" id="PbZ-oT-J3D"/>
-                        <outlet property="todayPerfumeCollectionView" destination="KEj-7H-Ibd" id="p6P-hW-frV"/>
                         <outlet property="todayPerfumeCollectionViewHeight" destination="fDw-ec-akU" id="f14-sw-dqM"/>
                         <outlet property="todayPerfumeImageView" destination="1a0-7T-hnY" id="RS5-IN-Dw2"/>
                         <outlet property="todayPerfumeLabel" destination="FcH-mM-X8q" id="94R-4j-UOA"/>
+                        <outlet property="todayStoryCollectionView" destination="KEj-7H-Ibd" id="p6P-hW-frV"/>
+                        <outlet property="weeklyRankingCollectionView" destination="psO-cN-JNh" id="zzX-ot-2ox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
