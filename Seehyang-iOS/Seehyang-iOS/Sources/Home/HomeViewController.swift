@@ -10,28 +10,99 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     @IBOutlet weak var todayPerfumeImageView: UIImageView!
+    
     @IBOutlet weak var todayPerfumeLabel: UILabel!
+    
     @IBOutlet weak var todayPerfumeCollectionView: UICollectionView!
+    
     @IBOutlet weak var popularRankingCollectionView: UICollectionView!
+    
     @IBOutlet weak var hotStoryCollectionView: UICollectionView!
+    
     @IBOutlet weak var lovePerfumeCollectionView: UICollectionView!
+    
     @IBOutlet weak var homeBannerView: UIView!
     
+    @IBOutlet weak var refreshButtonImageView: UIImageView!
+    
+    @IBOutlet weak var moreButtonImageView: UIImageView!
+    
     @IBOutlet weak var todayPerfumeCollectionViewHeight: NSLayoutConstraint!
+    
     @IBOutlet weak var popularRankingCollectionViewHeight: NSLayoutConstraint!
+    
     @IBOutlet weak var hotStoryCollectionViewHeight: NSLayoutConstraint!
+    
     @IBOutlet weak var lovePerfumeCollectionViewHeight: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        colorTodayPerfume("톰포드 네롤리 포르토피노")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        let backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
+
+        backBarButtonItem.tintColor = .black
+
+        navigationItem.backBarButtonItem = backBarButtonItem
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        lovePerfumeCollectionViewHeight.constant = lovePerfumeCollectionView.collectionViewLayout.collectionViewContentSize.height
+        let layout = lovePerfumeCollectionView.collectionViewLayout
+        lovePerfumeCollectionViewHeight.constant = layout.collectionViewContentSize.height
         self.view.layoutIfNeeded()
+    }
+    
+    @IBAction func refreshTodayPerfume(_ sender: UIButton) {
+        
+    }
+    
+    @objc func refreshButtonImageViewPressed() {
+        
+    }
+    
+    @IBAction func moreButtonPressed(_ sender: UIButton) {
+        gotoLovePerfumeListViewController()
+    }
+    
+    
+    @objc func moreButtonImageViewPressed() {
+        gotoLovePerfumeListViewController()
+    }
+    
+    /*  Description  :  List로 넘어가는 화면 전환 함수 */
+    private func gotoLovePerfumeListViewController() {
+        guard let list = self.storyboard?.instantiateViewController(withIdentifier: LovePerfumeListViewController.identifier) as? LovePerfumeListViewController else { return }
+        
+        navigationController?.pushViewController(list, animated: true)
+    }
+    
+    /*  Description  :  오늘의 향수에 색깔 주는 함수 */
+    private func colorTodayPerfume(_ name: String) {
+        let attributedStr = NSMutableAttributedString(string: todayPerfumeLabel.text ?? "")
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 2
+        attributedStr.addAttribute(
+            NSAttributedString.Key.paragraphStyle,
+            value: paragraphStyle,
+            range: NSRange(location: 0, length: attributedStr.length))
+        attributedStr.addAttribute(
+            .foregroundColor,
+            value: UIColor(named: "purple") ?? .black,
+            range: ((todayPerfumeLabel.text ?? "") as NSString).range(of: "\(name)"))
+        
+        todayPerfumeLabel.attributedText = attributedStr
     }
 }
 
@@ -84,6 +155,18 @@ extension HomeViewController {
         homeBannerView.layer.cornerRadius = 10
     }
     
+    private func setupRefreshButtonImageView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(refreshButtonImageViewPressed))
+        refreshButtonImageView.isUserInteractionEnabled = true
+        refreshButtonImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setupMoreButtonImageView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(moreButtonImageViewPressed))
+        moreButtonImageView.isUserInteractionEnabled = true
+        moreButtonImageView.addGestureRecognizer(tapGesture)
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -96,7 +179,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         case hotStoryCollectionView:
             return 10
         case lovePerfumeCollectionView:
-            return 10
+            return 6
         default:
             return 0
         }
