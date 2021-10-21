@@ -10,6 +10,9 @@ import Moya
 
 enum NetworkService {
     case perfumeDetail(perfumeID: Int)
+    case homeToday
+    case homeHotStory
+    case homeWeeklyRanking
 }
 
 extension NetworkService: TargetType {
@@ -19,6 +22,12 @@ extension NetworkService: TargetType {
         switch self {
         case .perfumeDetail(let perfumeID):
             return "api/v1/perfume/\(perfumeID)"
+        case .homeToday:
+            return "api/v1/home/today"
+        case .homeHotStory:
+            return "api/v1/home/hot-story"
+        case .homeWeeklyRanking:
+            return "api/v1/home/weekly-ranking"
         }
     }
     
@@ -26,12 +35,24 @@ extension NetworkService: TargetType {
         switch self {
         case .perfumeDetail:
             return .get
+        case .homeToday:
+            return .get
+        case .homeHotStory:
+            return .get
+        case .homeWeeklyRanking:
+            return .get
         }
     }
     
     var task: Task {
         switch self {
         case .perfumeDetail:
+            return .requestPlain
+        case .homeToday:
+            return .requestPlain
+        case .homeHotStory:
+            return .requestPlain
+        case .homeWeeklyRanking:
             return .requestPlain
         }
     }
