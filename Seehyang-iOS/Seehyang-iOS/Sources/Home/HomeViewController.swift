@@ -17,9 +17,11 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var lovePerfumeCollectionView: UICollectionView!
     @IBOutlet weak var homeBannerView: UIView!
     
+    @IBOutlet weak var todayPerfumeCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var popularRankingCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var hotStoryCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var lovePerfumeCollectionViewHeight: NSLayoutConstraint!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -27,9 +29,8 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        lovePerfumeCollectionViewHeight.constant = lovePerfumeCollectionView.collectionViewLayout.collectionViewContentSize.height
-        print(lovePerfumeCollectionViewHeight.constant)
         
+        lovePerfumeCollectionViewHeight.constant = lovePerfumeCollectionView.collectionViewLayout.collectionViewContentSize.height
         self.view.layoutIfNeeded()
     }
 }
@@ -49,16 +50,29 @@ extension HomeViewController {
     private func setupTodayPerfumeCollectionView() {
         todayPerfumeCollectionView.delegate = self
         todayPerfumeCollectionView.dataSource = self
+        
+        let width: CGFloat = ((view.bounds.width - 55) - 16) / 2
+        let height: CGFloat = width * 134.0 / 156.0
+        todayPerfumeCollectionViewHeight.constant = height
+        view.layoutIfNeeded()
     }
     
     private func setupPopularRankingCollectionView() {
         popularRankingCollectionView.delegate = self
         popularRankingCollectionView.dataSource = self
+        let width: CGFloat = ((view.bounds.width - 108) - 16) / 2
+        let height: CGFloat = width * 196.0 / 130.0
+        popularRankingCollectionViewHeight.constant = height
+        view.layoutIfNeeded()
     }
     
     private func setupHotStoryCollectionView() {
         hotStoryCollectionView.delegate = self
         hotStoryCollectionView.dataSource = self
+        let width: CGFloat = ((view.bounds.width - 55) - 16) / 2
+        let height: CGFloat = width * 283.0 / 156.0
+        hotStoryCollectionViewHeight.constant = height
+        view.layoutIfNeeded()
     }
     
     private func setupLovePerfumeCollectionView() {
@@ -130,7 +144,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionViewWidth: CGFloat = collectionView.bounds.width
         let collectionViewHeight: CGFloat = collectionView.bounds.height
         switch collectionView {
         case todayPerfumeCollectionView:
@@ -146,7 +159,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
             let width = height * 156.0 / 283.0
             return CGSize(width: width, height: height)
         case lovePerfumeCollectionView:
-            let width: CGFloat = (collectionViewWidth - 48 - 15) / 2
+            let width: CGFloat = (collectionView.bounds.width - 63) / 2
             let height: CGFloat = width * 245.0 / 156.0
             return CGSize(width: width, height: height)
         default:

@@ -41,7 +41,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-To-4zl">
-                                                <rect key="frame" x="156" y="95" width="112.5" height="67"/>
+                                                <rect key="frame" x="156" y="77.5" width="154.5" height="84.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 시향" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-Am-CHx">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="16"/>
@@ -50,11 +50,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcH-mM-X8q">
-                                                        <rect key="frame" x="0.0" y="20" width="112.5" height="47"/>
+                                                        <rect key="frame" x="0.0" y="20" width="154.5" height="64.5"/>
                                                         <string key="text">톰포드 네롤리 
 포르토피노를
 눈으로 시향해 보세요.</string>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <color key="textColor" name="point"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -282,16 +282,13 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test2" translatesAutoresizingMaskIntoConstraints="NO" id="vWs-ln-RT3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="214.5"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="vWs-ln-RT3" secondAttribute="height" multiplier="156:216" id="adN-XY-SNF"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="217.5"/>
                                                                 </imageView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryCard_1 Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="KZn-0Q-hnI">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="214.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="217.5"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJc-zJ-ahx">
-                                                                    <rect key="frame" x="0.0" y="218.5" width="155" height="36.5"/>
+                                                                    <rect key="frame" x="0.0" y="221.5" width="155" height="33.5"/>
                                                                     <string key="text">톰포드 네롤리 포르토피노
 두 줄 일 때</string>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -323,7 +320,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PXE-vF-lYr">
-                                                                    <rect key="frame" x="8" y="186.5" width="139" height="24"/>
+                                                                    <rect key="frame" x="8" y="189.5" width="139" height="24"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test3" translatesAutoresizingMaskIntoConstraints="NO" id="pnn-F5-7u3">
                                                                             <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -358,6 +355,7 @@
                                                                 <constraint firstItem="sJc-zJ-ahx" firstAttribute="top" secondItem="vWs-ln-RT3" secondAttribute="bottom" constant="4" id="gdp-YP-j7n"/>
                                                                 <constraint firstAttribute="trailing" secondItem="PXE-vF-lYr" secondAttribute="trailing" constant="8" id="lYA-TL-bUE"/>
                                                                 <constraint firstItem="Bva-Zb-lxE" firstAttribute="top" secondItem="lqp-A2-ip7" secondAttribute="top" constant="8" id="lnK-Vy-w5f"/>
+                                                                <constraint firstItem="vWs-ln-RT3" firstAttribute="height" secondItem="lqp-A2-ip7" secondAttribute="height" multiplier="0.782374" id="npX-2V-h2h"/>
                                                                 <constraint firstItem="vWs-ln-RT3" firstAttribute="top" secondItem="lqp-A2-ip7" secondAttribute="top" id="o8B-tf-Mj2"/>
                                                                 <constraint firstItem="sJc-zJ-ahx" firstAttribute="leading" secondItem="lqp-A2-ip7" secondAttribute="leading" id="rWA-TH-nce"/>
                                                                 <constraint firstItem="KZn-0Q-hnI" firstAttribute="trailing" secondItem="vWs-ln-RT3" secondAttribute="trailing" id="rik-9a-a2y"/>
@@ -624,10 +622,13 @@
                     <connections>
                         <outlet property="homeBannerView" destination="wLG-SJ-YaV" id="gcw-No-USZ"/>
                         <outlet property="hotStoryCollectionView" destination="aC9-Z7-0D3" id="f8C-oC-iMF"/>
+                        <outlet property="hotStoryCollectionViewHeight" destination="4pr-xs-Q2m" id="xUy-dW-YLh"/>
                         <outlet property="lovePerfumeCollectionView" destination="fl4-rJ-6Yq" id="wQi-GW-b4E"/>
                         <outlet property="lovePerfumeCollectionViewHeight" destination="e0e-k8-zjJ" id="6jJ-tQ-7kJ"/>
                         <outlet property="popularRankingCollectionView" destination="psO-cN-JNh" id="zzX-ot-2ox"/>
+                        <outlet property="popularRankingCollectionViewHeight" destination="H1R-jU-fgu" id="p4s-qm-Wgv"/>
                         <outlet property="todayPerfumeCollectionView" destination="KEj-7H-Ibd" id="p6P-hW-frV"/>
+                        <outlet property="todayPerfumeCollectionViewHeight" destination="fDw-ec-akU" id="f14-sw-dqM"/>
                         <outlet property="todayPerfumeImageView" destination="1a0-7T-hnY" id="RS5-IN-Dw2"/>
                         <outlet property="todayPerfumeLabel" destination="FcH-mM-X8q" id="94R-4j-UOA"/>
                     </connections>

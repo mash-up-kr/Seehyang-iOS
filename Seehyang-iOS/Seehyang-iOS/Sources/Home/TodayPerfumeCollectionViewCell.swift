@@ -22,5 +22,4 @@ class TodayPerfumeCollectionViewCell: UICollectionViewCell {
         profileImageView.layer.borderWidth = 1.0
     }
     
-    
 }
