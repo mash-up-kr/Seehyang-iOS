@@ -8,11 +8,11 @@
 import Foundation
 
 struct HomeHotStory: Codable {
-    let stories: [HomeHotStoryStory]
+    let stories: [HomeHotStoryDetail]
 }
 
 // MARK: - Story
-struct HomeHotStoryStory: Codable {
+struct HomeHotStoryDetail: Codable {
     let id: Int
     let perfumeImageURL, thumbnailURL: String
     let userProfileImageURL: String

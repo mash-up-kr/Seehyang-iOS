@@ -22,6 +22,24 @@ class NetworkProvider {
             self.decodeData(result: result, completion: completion)
         }
     }
+    
+    func requestHomeToday(completion: @escaping (Result<GenericResponse<HomeToday>, Error>) -> Void) {
+        provider.request(.homeToday) { result in
+            self.decodeData(result: result, completion: completion)
+        }
+    }
+    
+    func requestHomeHotStory(completion: @escaping (Result<GenericResponse<HomeHotStory>, Error>) -> Void) {
+        provider.request(.homeHotStory) { result in
+            self.decodeData(result: result, completion: completion)
+        }
+    }
+    
+    func requestHomeWeeklyRanking(completion: @escaping (Result<GenericResponse<HomeWeeklyRanking>, Error>) -> Void) {
+        provider.request(.homeWeeklyRanking) { result in
+            self.decodeData(result: result, completion: completion)
+        }
+    }
 }
 
 extension NetworkProvider {
