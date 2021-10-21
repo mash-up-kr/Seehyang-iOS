@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Moya
 
 final class HomeViewController: UIViewController {
 
@@ -45,13 +46,10 @@ final class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        
         navigationController?.navigationBar.shadowImage = UIImage()
         
         let backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: nil)
-
         backBarButtonItem.tintColor = .black
-
         navigationItem.backBarButtonItem = backBarButtonItem
         
     }
@@ -75,7 +73,6 @@ final class HomeViewController: UIViewController {
     @IBAction func moreButtonPressed(_ sender: UIButton) {
         gotoLovePerfumeListViewController()
     }
-    
     
     @objc func moreButtonImageViewPressed() {
         gotoLovePerfumeListViewController()
