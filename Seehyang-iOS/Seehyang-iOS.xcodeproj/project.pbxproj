@@ -137,10 +137,7 @@
 				D4A73234271B44A4000B6792 /* Home.storyboard */,
 				D4EC66172721C33200F80F0B /* LovePerfumeListViewController.swift */,
 				D4A73233271B44A4000B6792 /* HomeViewController.swift */,
-				D4EC66192721D15B00F80F0B /* GenericResponse.swift */,
-				D4EC661B2721D22800F80F0B /* HomeToday.swift */,
-				D4EC661D2721D49700F80F0B /* HomeHotStory.swift */,
-				D4EC661F2721D52C00F80F0B /* HomeWeeklyRanking.swift */,
+				D4EC66212721D6BB00F80F0B /* Models */,
 				D4EC66162721C2FE00F80F0B /* Cells */,
 			);
 			path = Home;
@@ -174,6 +171,17 @@
 				D4A7DC052720166A001ECDE2 /* PopularRankingCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D4EC66212721D6BB00F80F0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4EC66192721D15B00F80F0B /* GenericResponse.swift */,
+				D4EC661B2721D22800F80F0B /* HomeToday.swift */,
+				D4EC661D2721D49700F80F0B /* HomeHotStory.swift */,
+				D4EC661F2721D52C00F80F0B /* HomeWeeklyRanking.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E32DE08A27083A3900A359FC = {

@@ -531,6 +531,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="gotoLovePerfumeListViewController:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xdc-ml-gjf"/>
+                                                            <action selector="moreButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="y71-4B-ADA"/>
                                                             <action selector="refreshTodayPerfume:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T5l-9Y-TCT"/>
                                                         </connections>
                                                     </button>

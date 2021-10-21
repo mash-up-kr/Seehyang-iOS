@@ -9,7 +9,7 @@ import UIKit
 import Moya
 
 final class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var todayPerfumeImageView: UIImageView!
     
     @IBOutlet weak var todayPerfumeLabel: UILabel!
@@ -35,11 +35,15 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var hotStoryCollectionViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var lovePerfumeCollectionViewHeight: NSLayoutConstraint!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         colorTodayPerfume("톰포드 네롤리 포르토피노")
+        getHomeHotStory()
+        getHomeTodayData()
+        getHomeWeeklyRanking()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,6 +104,49 @@ final class HomeViewController: UIViewController {
             range: ((todayPerfumeLabel.text ?? "") as NSString).range(of: "\(name)"))
         
         todayPerfumeLabel.attributedText = attributedStr
+    }
+    
+    /*  Description  :  오늘의 향수 정보 API 통신 */
+    private func getHomeTodayData() {
+        NetworkProvider.shared.requestHomeToday { result in
+            switch result {
+            case .success(let data):
+                if let data = data.data {
+                    print(data.perfume)
+                    print(data.stories)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    /*  Description  :  오늘의 향수 핫한 스토리 API 통신 */
+    private func getHomeHotStory() {
+        NetworkProvider.shared.requestHomeHotStory { result in
+            switch result {
+            case .success(let data):
+                if let data = data.data {
+                    print(data.stories)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    /*  Description  :  오늘의 향수 주간 랭킹 API 통신 */
+    private func getHomeWeeklyRanking() {
+        NetworkProvider.shared.requestHomeWeeklyRanking { result in
+            switch result {
+            case .success(let data):
+                if let data = data.data {
+                    print(data.perfumes)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

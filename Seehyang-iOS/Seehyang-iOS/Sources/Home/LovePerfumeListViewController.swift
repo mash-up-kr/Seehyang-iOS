@@ -17,7 +17,6 @@ class LovePerfumeListViewController: UIViewController {
         
         setupViews()
     }
-
     
 }
 
