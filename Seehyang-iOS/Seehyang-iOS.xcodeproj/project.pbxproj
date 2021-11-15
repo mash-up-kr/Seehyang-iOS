@@ -13,6 +13,8 @@
 		23581090271B21BB00D38734 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2358108E271B21BB00D38734 /* NetworkProvider.swift */; };
 		23581091271B21BB00D38734 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2358108F271B21BB00D38734 /* NetworkService.swift */; };
 		23581093271B21C300D38734 /* PerfumeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23581092271B21C300D38734 /* PerfumeDetail.swift */; };
+		D4221B5B273FA871004EEC2A /* UploadAddTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4221B5A273FA871004EEC2A /* UploadAddTag.storyboard */; };
+		D4221B5D273FA883004EEC2A /* UploadAddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4221B5C273FA883004EEC2A /* UploadAddTagViewController.swift */; };
 		D4B113632708A23A004E024E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B113622708A23A004E024E /* PaddingLabel.swift */; };
 		D4C40A6D270851EC0099CF28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */; };
 		D4C40A6F270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */; };
@@ -36,6 +38,8 @@
 		2358108E271B21BB00D38734 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		2358108F271B21BB00D38734 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		23581092271B21C300D38734 /* PerfumeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeDetail.swift; sourceTree = "<group>"; };
+		D4221B5A273FA871004EEC2A /* UploadAddTag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadAddTag.storyboard; sourceTree = "<group>"; };
+		D4221B5C273FA883004EEC2A /* UploadAddTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadAddTagViewController.swift; sourceTree = "<group>"; };
 		D4B113622708A23A004E024E /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		E32DE09327083A3A00A359FC /* Seehyang-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seehyang-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32DE09627083A3A00A359FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			children = (
 				2358108D271B21AF00D38734 /* Network */,
 				235810752708A0F200D38734 /* PerfumeDetail */,
+				D4221B5E273FA88E004EEC2A /* UploadAddTag */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -106,6 +111,15 @@
 				2358108F271B21BB00D38734 /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D4221B5E273FA88E004EEC2A /* UploadAddTag */ = {
+			isa = PBXGroup;
+			children = (
+				D4221B5A273FA871004EEC2A /* UploadAddTag.storyboard */,
+				D4221B5C273FA883004EEC2A /* UploadAddTagViewController.swift */,
+			);
+			path = UploadAddTag;
 			sourceTree = "<group>";
 		};
 		D4B113612708A219004E024E /* Components */ = {
@@ -235,6 +249,7 @@
 				E32DE0A327083A3B00A359FC /* LaunchScreen.storyboard in Resources */,
 				2358106E27089AA400D38734 /* Assets.xcassets in Resources */,
 				235810772708A0FF00D38734 /* PerfumeDetail.storyboard in Resources */,
+				D4221B5B273FA871004EEC2A /* UploadAddTag.storyboard in Resources */,
 				E32DE09E27083A3A00A359FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +287,7 @@
 				E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */,
 				235810792708A18A00D38734 /* UIView+Extension.swift in Sources */,
 				E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */,
+				D4221B5D273FA883004EEC2A /* UploadAddTagViewController.swift in Sources */,
 				23581093271B21C300D38734 /* PerfumeDetail.swift in Sources */,
 				23581090271B21BB00D38734 /* NetworkProvider.swift in Sources */,
 				23581091271B21BB00D38734 /* NetworkService.swift in Sources */,
@@ -423,7 +439,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZVHD77BLL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Seehyang-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZVHD77BLL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Seehyang-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
