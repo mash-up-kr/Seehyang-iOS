@@ -19,49 +19,30 @@ class OnboardingViewController: UIViewController {
         )
         return pageViewController
     }()
-    
-    private let pageControl: UIPageControl = {
-        let pageControl: UIPageControl = UIPageControl()
-        pageControl.numberOfPages = 3
-        pageControl.currentPage = 0
-        pageControl.pageIndicatorTintColor = .red
-        pageControl.currentPageIndicatorTintColor = .coolgrey5
-        return pageControl
-    }()
-    
-    private let nextButton: UIButton = {
-        let button: UIButton = UIButton()
-        button.backgroundColor = .purple
-        button.titleLabel?.text = "다음"
-        button.titleLabel?.font = .systemFont(ofSize: 16)
-        button.titleLabel?.textColor = .white
-        return button
-    }()
 
     // MARK: - Variable
     var contentViewController: [OnboardingDescriptionViewController]? = []
     
+    // MARK: - IBOutlet
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var nextButton: UIButton!
+    
     // MARK: - Method
-    private func setLayout() {
-        view.addSubview(pageControl)
-        view.addSubview(nextButton)
+    private func setPageControl() {
+        pageControl.numberOfPages = 3
+        pageControl.currentPage = 0
+        pageControl.pageIndicatorTintColor = .red
+        pageControl.currentPageIndicatorTintColor = .coolgrey5
         
-        nextButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(42)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(48)
-        }
-        
-        pageControl.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(157)
-            make.bottom.equalTo(nextButton.snp.top).offset(84)
-            make.height.equalTo(12)
+        if #available(iOS 14.0, *) {
+            pageControl.backgroundStyle = .minimal
         }
     }
 
     private func removeTapGestureRecognizer() {
         guard let tapGesture = pageViewController.view.gestureRecognizers?.first(where: { recognizer in
             recognizer is UITapGestureRecognizer
+            
         }) else {
             return
         }
@@ -98,6 +79,14 @@ class OnboardingViewController: UIViewController {
         }
     }
     
+    private func setNextButton() {
+        nextButton.layer.cornerRadius = 8
+    }
+    
+    private func setPageControlCount(index: Int) {
+        pageControl.currentPage = index
+    }
+    
     func setup() {
         pageViewController.dataSource = self
         pageViewController.delegate = self
@@ -108,7 +97,8 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        setLayout()
+        setNextButton()
+        setPageControl()
         addContentViewController()
         setPageViewController()
         removeTapGestureRecognizer()
@@ -124,9 +114,10 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
             return nil
         }
         
-        let movedIndex = index - 1
+        var movedIndex = index - 1
         guard movedIndex >= 0 else {
-            return contentViewController?.last
+            movedIndex = 0
+            return nil
         }
         return contentViewController?[movedIndex]
     }
@@ -136,12 +127,12 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
               let index = contentViewController?.firstIndex(of: viewController) else {
             return nil
         }
-        
-        let movedIndex = index + 1
+
+        var movedIndex = index + 1
         guard movedIndex < (contentViewController?.count ?? 0) else {
-            return contentViewController?.first
+            movedIndex = 2
+            return nil
         }
-        
         return contentViewController?[movedIndex]
     }
 }
@@ -149,9 +140,12 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
 // MARK: - UIPageViewControllerDelegate
 extension OnboardingViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        
-        if completed {
-            print(completed)
+
+        guard let currentViewController = pageViewController.viewControllers?.first as? OnboardingDescriptionViewController,
+              let index = contentViewController?.firstIndex(of: currentViewController) else {
+            return
         }
+        
+        setPageControlCount(index: index)
     }
 }

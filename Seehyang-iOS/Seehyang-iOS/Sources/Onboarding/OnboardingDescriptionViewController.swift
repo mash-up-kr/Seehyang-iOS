@@ -10,7 +10,7 @@ import SnapKit
 
 class OnboardingDescriptionViewController: UIViewController {
     
-    // MARK: - Variable
+    // MARK: - Variable    
     lazy var onboardingImageView: UIImageView = {
         let imageView: UIImageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -89,4 +89,3 @@ class OnboardingDescriptionViewController: UIViewController {
         setLayout()
     }
 }
-
