@@ -21,7 +21,7 @@ class OnboardingViewController: UIViewController {
     }()
 
     // MARK: - Variable
-    var contentViewController: [OnboardingDescriptionViewController]? = []
+    private var contentViewController: [OnboardingDescriptionViewController]? = []
     
     // MARK: - IBOutlet
     @IBOutlet weak var pageControl: UIPageControl!
@@ -50,7 +50,7 @@ class OnboardingViewController: UIViewController {
         pageViewController.view.removeGestureRecognizer(tapGesture)
     }
     
-    func setPageViewController() {
+    private func setPageViewController() {
         self.view.addSubview(pageViewController.view)
         pageViewController.view.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
@@ -67,7 +67,7 @@ class OnboardingViewController: UIViewController {
         self.view.addSubview(pageViewController.view)
     }
     
-    func addContentViewController() {
+    private func addContentViewController() {
         contentViewController = [
             UIImage(named: "onboarding1"),
             UIImage(named: "onboarding2"),
@@ -87,7 +87,7 @@ class OnboardingViewController: UIViewController {
         pageControl.currentPage = index
     }
     
-    func setup() {
+    private func setup() {
         pageViewController.dataSource = self
         pageViewController.delegate = self
         
