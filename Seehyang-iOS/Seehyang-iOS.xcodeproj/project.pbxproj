@@ -15,6 +15,9 @@
 		23581093271B21C300D38734 /* PerfumeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23581092271B21C300D38734 /* PerfumeDetail.swift */; };
 		CE53243D273F984C004A65C0 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE53243C273F984C004A65C0 /* Onboarding.storyboard */; };
 		CE53243F273F985E004A65C0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53243E273F985E004A65C0 /* OnboardingViewController.swift */; };
+		CE6E14FA27476BE600315768 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE6E14F927476BE600315768 /* SnapKit */; };
+		CE6E14FC2747747000315768 /* OnboardingDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E14FB2747747000315768 /* OnboardingDescriptionViewController.swift */; };
+		CE6E14FE274BE3C400315768 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E14FD274BE3C400315768 /* UIColor+Extension.swift */; };
 		D4B113632708A23A004E024E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B113622708A23A004E024E /* PaddingLabel.swift */; };
 		D4C40A6D270851EC0099CF28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */; };
 		D4C40A6F270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */; };
@@ -40,6 +43,8 @@
 		23581092271B21C300D38734 /* PerfumeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeDetail.swift; sourceTree = "<group>"; };
 		CE53243C273F984C004A65C0 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		CE53243E273F985E004A65C0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		CE6E14FB2747747000315768 /* OnboardingDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDescriptionViewController.swift; sourceTree = "<group>"; };
+		CE6E14FD274BE3C400315768 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D4B113622708A23A004E024E /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		E32DE09327083A3A00A359FC /* Seehyang-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seehyang-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32DE09627083A3A00A359FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C40A6F270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				CE6E14FA27476BE600315768 /* SnapKit in Frameworks */,
 				E32DE0C527084DEF00A359FC /* CombineMoya in Frameworks */,
 				E32DE0C127084D9200A359FC /* Kingfisher in Frameworks */,
 				D4C40A71270851EC0099CF28 /* FirebaseCrashlytics in Frameworks */,
@@ -81,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				235810782708A18A00D38734 /* UIView+Extension.swift */,
+				CE6E14FD274BE3C400315768 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			children = (
 				CE53243C273F984C004A65C0 /* Onboarding.storyboard */,
 				CE53243E273F985E004A65C0 /* OnboardingViewController.swift */,
+				CE6E14FB2747747000315768 /* OnboardingDescriptionViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 				D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */,
 				D4C40A6E270851EC0099CF28 /* FirebaseAnalyticsSwift-Beta */,
 				D4C40A70270851EC0099CF28 /* FirebaseCrashlytics */,
+				CE6E14F927476BE600315768 /* SnapKit */,
 			);
 			productName = "Seehyang-iOS";
 			productReference = E32DE09327083A3A00A359FC /* Seehyang-iOS.app */;
@@ -230,6 +239,7 @@
 				E32DE0C327084DEF00A359FC /* XCRemoteSwiftPackageReference "Moya" */,
 				E32DE0C927084E2C00A359FC /* XCRemoteSwiftPackageReference "Then" */,
 				D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE6E14F827476BE600315768 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = E32DE09427083A3A00A359FC /* Products */;
 			projectDirPath = "";
@@ -285,11 +295,13 @@
 				E32DE09B27083A3A00A359FC /* ViewController.swift in Sources */,
 				D4B113632708A23A004E024E /* PaddingLabel.swift in Sources */,
 				E32DE09727083A3A00A359FC /* AppDelegate.swift in Sources */,
+				CE6E14FE274BE3C400315768 /* UIColor+Extension.swift in Sources */,
 				235810792708A18A00D38734 /* UIView+Extension.swift in Sources */,
 				E32DE09927083A3A00A359FC /* SceneDelegate.swift in Sources */,
 				23581093271B21C300D38734 /* PerfumeDetail.swift in Sources */,
 				23581090271B21BB00D38734 /* NetworkProvider.swift in Sources */,
 				CE53243F273F985E004A65C0 /* OnboardingViewController.swift in Sources */,
+				CE6E14FC2747747000315768 /* OnboardingDescriptionViewController.swift in Sources */,
 				23581091271B21BB00D38734 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +510,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE6E14F827476BE600315768 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -533,6 +553,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE6E14F927476BE600315768 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6E14F827476BE600315768 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		D4C40A6C270851EC0099CF28 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4C40A6B270851EC0099CF28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
