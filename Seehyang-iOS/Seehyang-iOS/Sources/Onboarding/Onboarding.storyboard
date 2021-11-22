@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Seehyang_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVV-mh-TO9">
+                                <rect key="frame" x="30" y="806" width="354" height="48"/>
+                                <color key="backgroundColor" name="purple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="46w-xS-fiG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" name="white"/>
+                                </state>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="r7j-ps-hoK">
+                                <rect key="frame" x="146.5" y="734" width="121.5" height="28"/>
+                                <color key="pageIndicatorTintColor" name="grey5"/>
+                                <color key="currentPageIndicatorTintColor" name="coolgrey2"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xVV-mh-TO9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="J8T-1X-D4Z"/>
+                            <constraint firstItem="xVV-mh-TO9" firstAttribute="top" secondItem="r7j-ps-hoK" secondAttribute="bottom" constant="44" id="Qdk-nJ-uAa"/>
+                            <constraint firstAttribute="bottom" secondItem="xVV-mh-TO9" secondAttribute="bottom" constant="42" id="Ym5-lU-gcx"/>
+                            <constraint firstItem="r7j-ps-hoK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iHK-SL-YAC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xVV-mh-TO9" secondAttribute="trailing" constant="30" id="rym-6z-HVw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="xVV-mh-TO9" id="WbT-ol-0Ri"/>
+                        <outlet property="pageControl" destination="r7j-ps-hoK" id="zaR-62-oVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="coolgrey2">
+            <color red="0.36899998784065247" green="0.37999999523162842" blue="0.40799999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey5">
+            <color red="0.84700000286102295" green="0.84700000286102295" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple">
+            <color red="0.37254901960784315" green="0.32941176470588235" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
